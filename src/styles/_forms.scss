@@ -1,0 +1,85 @@
+@import './colors';
+
+$leftPadding: 6rem;
+
+.form-container {
+  flex-basis: 60%;
+}
+
+.form-title {
+  font-size: 2em;
+  @extend .flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: $mineShaft;
+  background-color: $white;
+  border-bottom: 1px solid $primaryRule;
+}
+
+.form-header {
+  @extend .flex-row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $backgroundHalfBaked;
+  padding-left: $leftPadding;
+  min-height: 5rem;
+  @include tablet {
+    padding-left: $leftPadding/2;
+  }
+  @include mobile {
+    padding-left: 1rem;
+  }
+  span {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.form-section {
+  margin-left: $leftPadding;
+  margin-top: 1rem;
+  margin-bottom: 4.5rem;
+  min-height: 5rem;
+  @extend .flex-column;
+  justify-content: center;
+  width: 60%;
+  @include tablet {
+    width: 80%;
+    margin-left: $leftPadding/2;
+  }
+  @include mobile {
+    margin: 0 1rem 4.5rem 1rem;
+    width: calc(100% - 2rem);
+  }
+  &:last-of-type {
+    padding-bottom: 4rem;
+  }
+}
+
+.form-paper-sections {
+  @extend .flex-column-center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.form-paper-section {
+  width: 85%;
+  margin-bottom: 3rem;
+}
+.form-paper {
+  padding: 1.5rem;
+  width: 100%;
+  &-header {
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+  }
+}

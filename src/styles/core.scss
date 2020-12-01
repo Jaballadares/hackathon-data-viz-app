@@ -1,0 +1,55 @@
+:global {
+  @import 'base';
+  @import 'device-sizes';
+  @import '~normalize.css/normalize';
+
+
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+  }
+  #intercom-container {
+    z-index: 1400 !important; // place intercom under modal
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: $backgroundLight;
+    font-family: 'MuseoSans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    @include desktop {
+      font-size: .8rem;
+    }
+
+    @include mobile {
+      font-size: .75rem;
+    }
+  }
+  a {
+    text-decoration: none !important;
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  h1 {
+    font-family: 'MuseoSans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.875rem;
+    font-weight: 500;
+  }
+  h2 {
+    font-family: 'MuseoSans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  [type=button]{
+    -webkit-appearance: none !important;
+  }
+}

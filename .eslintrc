@@ -1,0 +1,49 @@
+root: true
+
+parser: babel-eslint
+
+extends: airbnb
+plugins: [react]
+
+env:
+  browser: true
+  es6: true
+  jasmine: true
+  node: true
+
+ecmaFeatures:
+  jsx: true
+  modules: true
+
+globals:
+  MockFirebase: true
+  sinon: true
+  Raven: true
+  __COVERAGE__: true
+  __DEV__: true
+
+rules:
+  import/no-unresolved: 2
+  consistent-return: 2
+  max-len: 0
+  no-else-return: 2
+  arrow-body-style: 0
+  react/forbid-prop-types: 0
+  react/sort-comp: 0
+  curly: ['error', 'all']
+  no-use-before-define: 2
+  no-extra-boolean-cast: 0
+  react/jsx-filename-extension: 0
+  import/no-named-as-default: 0
+  no-underscore-dangle: 0
+
+  # Look at together with Chris
+  react/prefer-stateless-function: 0 # we should add this back in. +1 Let's look at this one together.  I tried implementing in app.js and it didn't seem the rule was working.
+
+settings:
+  import/resolver:
+    node:
+      moduleDirectory:
+        - node_modules
+        # this sets the path the root since we have a `test` folder that will need to be included going forward.
+        - '/'

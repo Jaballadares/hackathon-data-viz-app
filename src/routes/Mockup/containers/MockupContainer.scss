@@ -1,0 +1,112 @@
+
+/**** **** **** **** ****
+COLORS -
+Michelle Kim
+**** **** **** **** ****/
+$gold: #deaa46;
+$text-grey: #241F20;
+$underline-grey: #B4B5B4;
+$black: #231f20; // CMYK - 70 68 64 74
+$white: #ffffff; // CMYK -  0 0 0 0
+$graph-background: #eeedef;
+
+/**** **** **** **** ****
+FONT -
+Headers: font-weight: 700;
+Body Text: font-weight: 300;
+**** **** **** **** ****/
+
+$body-font: 'Source Sans Pro', sans-serif;
+
+
+.projectWrapper {
+  position: relative;
+  padding: 5%;
+  background-image: url(../../../static/MapBackgroundSat.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  // background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  // height: calc((11/8.5)*100vw);
+  height: calc(1920px*(11/8.5));
+
+
+}
+
+header {
+  width: 100%;
+  display: flex;
+  height: 9%;
+  .logo {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    right: 5%;
+  }
+}
+.headerLeft {
+  position: absolute;
+}
+
+.neighborhoodName {
+  font-size: 1.5em;
+  color: $text-grey;
+  font-weight: 300;
+  border-bottom: 2px solid $underline-grey;
+  width: fit-content;
+  margin-bottom: 0;
+  margin-top: 3%;
+}
+
+.graphTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.graphsContainer {
+  // height: 66%;
+  height: 535px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chartWrapper {
+  height: 500px;
+  width: 48%;
+  & > h2 {
+    text-align: center;
+    margin: 0;
+  }
+  background-color: #eeedef;
+  margin: 2rem auto;
+  padding: 2rem;
+
+}
+
+@media print {
+  .graphsContainer {
+  }
+  .chartWrapper {
+    height: 200px;
+    margin-bottom: 50px auto;
+  }
+}
+.chart {
+  height: 100%;
+}
+
+.chart > svg {
+}
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  text-align: right;
+  p {
+    display: inline-block;
+    font-size: .5em;
+    vertical-align: super;
+  }
+}

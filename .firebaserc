@@ -1,0 +1,42 @@
+{
+  "projects": {
+    "master": "market-data-viz",
+    "prod": "market-data-viz"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "version": "${npm_package_version}",
+        "env": "development",
+        "firebase": {
+          "apiKey": "AIzaSyBVtQH8-9YDxl5xjC3UH09d5yzyv19w0k4",
+          "authDomain": "market-data-viz.firebaseapp.com",
+          "databaseURL": "https://market-data-viz.firebaseio.com",
+          "projectId": "market-data-viz",
+          "storageBucket": "market-data-viz.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "version": "${npm_package_version}",
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyBVtQH8-9YDxl5xjC3UH09d5yzyv19w0k4",
+          "authDomain": "market-data-viz.firebaseapp.com",
+          "databaseURL": "https://market-data-viz.firebaseio.com",
+          "projectId": "market-data-viz",
+          "storageBucket": "market-data-viz.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
+  }
+}

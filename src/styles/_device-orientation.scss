@@ -1,0 +1,13 @@
+@import './_device-sizes';
+
+@mixin mobile-landscape {
+  @media (max-width: #{$tablet-width - 1px}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mobile-portrait {
+  @media (max-width: #{$tablet-width - 1px}) and (orientation: portrait) {
+    @content;
+  }
+}

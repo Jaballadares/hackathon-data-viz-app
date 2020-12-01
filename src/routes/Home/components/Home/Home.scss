@@ -1,0 +1,26 @@
+@import 'base';
+.container {
+  @extend .flex-column-center;
+  padding-top: 4rem;
+}
+
+.section {
+  @extend .flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.chartSection {
+  @extend .flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.button {
+  margin-right: 1rem;
+}
+
+.grey{
+  backgroundColor: "#eeedef"
+}

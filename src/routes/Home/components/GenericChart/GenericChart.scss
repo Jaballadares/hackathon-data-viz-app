@@ -1,0 +1,15 @@
+@import 'base';
+.container {
+  @extend .flex-column-center;
+  align-items: center;
+}
+
+.section {
+  @extend .flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.container {
+  width: 33%;
+}

@@ -1,0 +1,32 @@
+// unique color names generated at http://chir.ag/projects/name-that-color
+
+$jellyBean: #217A94; // RGB: 33, 122, 148 Primary Button,
+$deepSea: #24434C; // RGB: 36, 67, 76 Navigation Bar
+$cabaret: #D23969; // RGB: 210, 57, 105 Primary CTA, reminder
+$emerald: #51BF87; // RGB: 81, 191, 135button, success
+$halfBaked: #98C4D0; // RGB: 152, 196, 208, highlight soft-blue
+$mineShaft: #202020; // RGB: 32, 32, 32 primary- text Dark grey
+$capeCod: #3F484A; // RGB: 63, 72, 74 Midnight Blue
+$scorpion: #5F5F5F; // RGB: 95, 95, 95 Medium Grey
+$alto: #D5D5D5; // RGB: 213, 213, 213 Light-grey
+$capeCodLight: lighten($capeCod, 95%);
+$white: #FFF;
+$alabaster: #f5f5f5;
+$alabasterLight: #fafafa;
+$backgroundHalfBaked: rgba($halfBaked, .15);
+$snow: #FAFAFA; // RGB: 250, 250, 250
+$astral: #217A94; // RGB: 13, 48, 15
+
+$primaryButton: $jellyBean;
+$primary: $jellyBean;
+$primaryCta: $cabaret;
+$error: $cabaret;
+$success: $emerald;
+$accent: $halfBaked;
+$primaryText: $mineShaft;
+$backgroundDark: $capeCod;
+$secondaryText: $scorpion;
+$lightText: $white;
+$primaryRule: $alto;
+$backgroundLight: $capeCodLight;
+$backgroundGray: $alabaster;

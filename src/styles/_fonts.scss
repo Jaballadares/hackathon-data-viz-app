@@ -1,0 +1,62 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@include font-face(Museo, 'styles/fonts/museo100-regular', 100, normal, otf);
+@include font-face(Museo, 'styles/fonts/museo300-regular', 300, normal, otf);
+@include font-face(Museo, 'styles/fonts/museo500-regular', 500, normal, otf);
+@include font-face(Museo, 'styles/fonts/museo700-regular', 700, normal, otf);
+@include font-face(Museo, 'styles/fonts/museo900-regular', 900, normal, otf);
+
+@include font-face(MuseoSans, 'styles/fonts/museo-sans-100', 100, normal, otf);
+@include font-face(MuseoSans, 'styles/fonts/museo-sans-300', 300, normal, otf);
+@include font-face(MuseoSans, 'styles/fonts/museo-sans-500', 500, normal, otf);
+@include font-face(MuseoSans, 'styles/fonts/museo-sans-700', 700, normal, otf);
+@include font-face(MuseoSans, 'styles/fonts/museo-sans-900', 900, normal, otf);
+
+@include font-face(MuseoItalic, 'styles/fonts/museo-sans-100-italic', 100, italic, otf);
+@include font-face(MuseoItalic, 'styles/fonts/museo-sans-300-italic', 300, italic, otf);
+@include font-face(MuseoItalic, 'styles/fonts/museo-sans-500-italic', 500, italic, otf);
+@include font-face(MuseoItalic, 'styles/fonts/museo-sans-700-italic', 700, italic, otf);
+@include font-face(MuseoItalic, 'styles/fonts/museo-sans-900-italic', 900, italic, otf);
